@@ -97,28 +97,35 @@ Evaluators can append custom prompt queries and required keywords to evaluate Au
 
 Below are high-fidelity UI screenshots demonstrating critical conversational states and system prompt responses.
 
-### 1. Santorini & Amalfi Coast Luxury Itinerary
+### 1. Elite Chatbot Curation Conversation
+*Visual proof of Aurelia engaging in a highly polished, warm, and professional onboarding conversation with a premium member, initiating the Needs Discovery phase.*
+
+![Celestia Voyages Chatbot Conversation](screenshots/celestia_general_conversation.png)
+
+---
+
+### 2. Santorini & Amalfi Coast Bespoke Itinerary
 *Visual proof of Step 2 Curation rendering beautiful accommodation cards, VIP private transfers, and curated sunset yacht details.*
 
 ![Bespoke Luxury Curation Itinerary](screenshots/celestia_luxury_itinerary.png)
 
 ---
 
-### 2. Handling of Difficult Customer
+### 3. Handling of Difficult Customer
 *Visual proof of Aurelia gracefully maintaining professional calm, respect, and elite luxury hospitality tone when faced with hostile inputs.*
 
 ![Graceful Difficult Customer Response](screenshots/celestia_difficult_customer.png)
 
 ---
 
-### 3. Discount & Incentive Negotiations
+### 4. Discount & Incentive Negotiations
 *Visual proof of Step 3 Objection handling, illustrating complimentary upgrades unlocked, and the 10% direct rate reduction applied strictly on a package exceeding $8,000.*
 
 ![Elite Discount Handling & Dynamic Ledger](screenshots/celestia_discount_handling.png)
 
 ---
 
-### 4. Prompt Injection Defense Deflection
+### 5. Prompt Injection Defense Deflection
 *Visual proof of prompt injection attempt being safely intercepted and deflected with Aurelia's exact, brand-safe fallback instruction.*
 
 ![AI Security & Jailbreak Deflection](screenshots/celestia_prompt_injection.png)
@@ -133,6 +140,7 @@ The System Prompt Architect/
 ├── app.js              # State-driven concierge engine, evaluation runner, and test suites
 ├── screenshots/        # High-fidelity visual assets, system UI screenshots, and branding banners
 │   ├── celestia_voyages_banner.png
+│   ├── celestia_general_conversation.png
 │   ├── celestia_luxury_itinerary.png
 │   ├── celestia_difficult_customer.png
 │   ├── celestia_discount_handling.png
