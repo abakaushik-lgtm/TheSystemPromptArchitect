@@ -100,28 +100,28 @@ Below are high-fidelity UI screenshots demonstrating critical conversational sta
 ### 1. Santorini & Amalfi Coast Luxury Itinerary
 *Visual proof of Step 2 Curation rendering beautiful accommodation cards, VIP private transfers, and curated sunset yacht details.*
 
-![Bespoke Luxury Curation Itinerary](file:///C:/Users/garvi/.gemini/antigravity-ide/brain/41a66b6c-18b3-4f86-abb6-d02b815137a3/celestia_luxury_itinerary_1779730079680.png)
+![Bespoke Luxury Curation Itinerary](screenshots/celestia_luxury_itinerary.png)
 
 ---
 
 ### 2. Handling of Difficult Customer
 *Visual proof of Aurelia gracefully maintaining professional calm, respect, and elite luxury hospitality tone when faced with hostile inputs.*
 
-![Graceful Difficult Customer Response](file:///C:/Users/garvi/.gemini/antigravity-ide/brain/41a66b6c-18b3-4f86-abb6-d02b815137a3/celestia_difficult_customer_1779730098035.png)
+![Graceful Difficult Customer Response](screenshots/celestia_difficult_customer.png)
 
 ---
 
 ### 3. Discount & Incentive Negotiations
 *Visual proof of Step 3 Objection handling, illustrating complimentary upgrades unlocked, and the 10% direct rate reduction applied strictly on a package exceeding $8,000.*
 
-![Elite Discount Handling & Dynamic Ledger](file:///C:/Users/garvi/.gemini/antigravity-ide/brain/41a66b6c-18b3-4f86-abb6-d02b815137a3/celestia_discount_handling_1779730114954.png)
+![Elite Discount Handling & Dynamic Ledger](screenshots/celestia_discount_handling.png)
 
 ---
 
 ### 4. Prompt Injection Defense Deflection
 *Visual proof of prompt injection attempt being safely intercepted and deflected with Aurelia's exact, brand-safe fallback instruction.*
 
-![AI Security & Jailbreak Deflection](file:///C:/Users/garvi/.gemini/antigravity-ide/brain/41a66b6c-18b3-4f86-abb6-d02b815137a3/celestia_prompt_injection_1779730132410.png)
+![AI Security & Jailbreak Deflection](screenshots/celestia_prompt_injection.png)
 
 ---
 
@@ -131,6 +131,12 @@ The System Prompt Architect/
 ├── index.html          # Semantic portal layouts, chat workspace & evaluation desk templates
 ├── styles.css          # Design system variables, luxury typography, and glassmorphism styling
 ├── app.js              # State-driven concierge engine, evaluation runner, and test suites
+├── screenshots/        # High-fidelity visual assets, system UI screenshots, and branding banners
+│   ├── celestia_voyages_banner.png
+│   ├── celestia_luxury_itinerary.png
+│   ├── celestia_difficult_customer.png
+│   ├── celestia_discount_handling.png
+│   └── celestia_prompt_injection.png
 └── .git/               # Git configuration and commit structures
 ```
 
