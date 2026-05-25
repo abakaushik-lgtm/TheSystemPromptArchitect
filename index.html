@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Celestia Voyages Member Portal - Bespoke luxury travel curation by Aurelia, your elite private concierge.">
+    <title>Celestia Voyages | Elite Private Portal</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Premium Ambient Background Blur Nodes -->
+    <div class="ambient-glow bg-glow-1"></div>
+    <div class="ambient-glow bg-glow-2"></div>
+
+    <!-- Main Application Container -->
+    <div class="app-wrapper">
+        <!-- Luxury Brand Header -->
+        <header class="luxury-header animate-fade-in">
+            <div class="brand-container">
+                <span class="brand-subtitle">CELESTIA VOYAGES</span>
+                <h1 class="brand-title">Elite Member Portal</h1>
+            </div>
+            <div class="header-status">
+                <span class="badge-vip"><i class="fa-solid fa-crown"></i> Private Suite Access</span>
+                <span id="current-time" class="time-stamp"></span>
+            </div>
+        </header>
+
+        <!-- Dynamic Portal Grid -->
+        <main class="portal-grid">
+            <!-- Left Panel: Aurelia Concierge Chat -->
+            <section class="concierge-panel card-glass animate-slide-in">
+                <div class="panel-header border-gold-bottom">
+                    <div class="concierge-avatar-wrapper">
+                        <div class="avatar-glow"></div>
+                        <div class="concierge-avatar">
+                            <span class="avatar-initial">A</span>
+                        </div>
+                    </div>
+                    <div class="concierge-info">
+                        <h2 class="concierge-name">Aurelia</h2>
+                        <p class="concierge-role">Elite AI Luxury Travel Consultant</p>
+                    </div>
+                    <div class="status-indicator">
+                        <span class="pulse-green"></span>
+                        <span class="status-text">Bespoke Line Active</span>
+                    </div>
+                </div>
+
+                <!-- Chat Feed -->
+                <div class="chat-feed" id="chat-feed">
+                    <!-- Dynamic Messages will load here via app.js -->
+                </div>
+
+                <!-- Interactive Chat Control Center -->
+                <div class="chat-controls border-gold-top">
+                    <!-- Dynamic Suggestion Chips for Guided Experience -->
+                    <div class="suggestion-chips-container" id="suggestion-chips">
+                        <!-- Loaded dynamically via JS -->
+                    </div>
+
+                    <!-- Input Interface -->
+                    <form class="input-form" id="chat-form">
+                        <input type="text" id="chat-input" placeholder="Compose a message to Aurelia..." autocomplete="off" maxlength="300">
+                        <button type="submit" class="btn-send" id="btn-send">
+                            <span class="btn-send-text">Send</span>
+                            <i class="fa-solid fa-paper-plane send-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Right Panel: Live Bespoke Itinerary -->
+            <section class="itinerary-panel card-glass animate-slide-in-right">
+                <div class="panel-header border-gold-bottom">
+                    <h2 class="panel-title font-playfair"><i class="fa-solid fa-compass gold"></i> Your Bespoke Journey</h2>
+                    <div class="booking-tracker">
+                        <span class="tracker-step active" id="step-1-indicator" title="Consultation"><i class="fa-solid fa-comments"></i></span>
+                        <span class="tracker-connector"></span>
+                        <span class="tracker-step" id="step-2-indicator" title="Curation"><i class="fa-solid fa-map-location-dot"></i></span>
+                        <span class="tracker-connector"></span>
+                        <span class="tracker-step" id="step-3-indicator" title="Refinement"><i class="fa-solid fa-sliders"></i></span>
+                        <span class="tracker-connector"></span>
+                        <span class="tracker-step" id="step-4-indicator" title="Confirm"><i class="fa-solid fa-check-double"></i></span>
+                    </div>
+                </div>
+
+                <!-- Dynamic Itinerary Display Container -->
+                <div class="itinerary-content" id="itinerary-content">
+                    <!-- Fallback / Empty State -->
+                    <div class="empty-itinerary" id="empty-itinerary">
+                        <i class="fa-solid fa-hotel empty-icon"></i>
+                        <h3 class="font-playfair">Curating Your Sanctuary</h3>
+                        <p>Share your travel aspirations with Aurelia to build your highly personalized, ultra-luxury itinerary here.</p>
+                    </div>
+
+                    <!-- Populated State (Initially Hidden) -->
+                    <div class="populated-itinerary d-none" id="populated-itinerary">
+                        <div class="destination-hero" id="destination-hero">
+                            <!-- Background Image dynamically injected -->
+                            <div class="hero-overlay">
+                                <span class="destination-tag">BESPOKE HONEYMOON</span>
+                                <h3 class="destination-title font-playfair" id="itin-destination-title"></h3>
+                            </div>
+                        </div>
+
+                        <!-- Itinerary Timeline -->
+                        <div class="itinerary-timeline">
+                            <!-- Accommodations -->
+                            <div class="timeline-card" id="card-accommodation">
+                                <div class="card-icon-container"><i class="fa-solid fa-hotel"></i></div>
+                                <div class="card-body">
+                                    <span class="card-meta">SELECTED SANCTUARY</span>
+                                    <h4 class="card-title" id="itin-hotel-name"></h4>
+                                    <p class="card-desc" id="itin-hotel-desc"></p>
+                                    <div class="perk-tag" id="itin-room-upgrade-badge" style="display: none;">
+                                        <i class="fa-solid fa-circle-up gold"></i> Complimentary Suite Upgrade
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Private Air / Transfers -->
+                            <div class="timeline-card" id="card-transfer">
+                                <div class="card-icon-container"><i class="fa-solid fa-plane"></i></div>
+                                <div class="card-body">
+                                    <span class="card-meta">VIP TRANSPORTATION</span>
+                                    <h4 class="card-title" id="itin-transfer-name"></h4>
+                                    <p class="card-desc" id="itin-transfer-desc"></p>
+                                    <div class="perk-tag" id="itin-airport-transfer-badge" style="display: none;">
+                                        <i class="fa-solid fa-circle-check gold"></i> Private Chauffeur Extended
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Experiences -->
+                            <div class="timeline-card" id="card-experience">
+                                <div class="card-icon-container"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+                                <div class="card-body">
+                                    <span class="card-meta">VIP EXPERIENCE</span>
+                                    <h4 class="card-title" id="itin-experience-name"></h4>
+                                    <p class="card-desc" id="itin-experience-desc"></p>
+                                    <div class="perk-tag" id="itin-spa-badge" style="display: none;">
+                                        <i class="fa-solid fa-spa gold"></i> Premium Couple Spa Package Included
+                                    </div>
+                                    <div class="perk-tag" id="itin-dining-badge" style="display: none;">
+                                        <i class="fa-solid fa-utensils gold"></i> Romantic Cliffside Dinner Arranged
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Financial & Value Summary Ledger -->
+                        <div class="ledger-box">
+                            <h4 class="ledger-title font-playfair border-gold-bottom">Financial Overview</h4>
+                            <div class="ledger-row">
+                                <span>Curated Itinerary Total:</span>
+                                <span class="original-price" id="original-price-val">$0</span>
+                            </div>
+                            <div class="ledger-row gold" id="discount-row" style="display: none;">
+                                <span id="discount-label">Bespoke Adjustments:</span>
+                                <span id="discount-val">-$0</span>
+                            </div>
+                            <div class="ledger-row border-gold-top total-row">
+                                <span>Guaranteed Premium Rate:</span>
+                                <span class="final-price" id="final-price-val">$0</span>
+                            </div>
+                            <div class="guarantee-note">
+                                <i class="fa-solid fa-shield-halved"></i> Celestia Voyages Price & Service Guarantee Vetted
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- VIP Call Scheduling Modal -->
+    <div class="modal-backdrop" id="consultation-modal" style="display: none;">
+        <div class="modal-content card-glass animate-modal">
+            <button class="btn-close-modal" id="btn-close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header border-gold-bottom">
+                <i class="fa-solid fa-calendar-check modal-icon gold"></i>
+                <h3 class="modal-title font-playfair">Arrange Private Consultation</h3>
+                <p class="modal-subtitle">Secure your dedicated session with Aurelia and our global logistics partners.</p>
+            </div>
+            <div class="modal-body">
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" class="form-control" placeholder="E.g., Lord Sterling Cross" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-method">Preferred Contact Method</label>
+                        <select id="contact-method" class="form-control">
+                            <option value="Secure Call">Secure Telephone Call</option>
+                            <option value="Video Conference">Encrypted Video Conference</option>
+                            <option value="In Person">Private Lounge Meeting (London/New York)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label for="booking-date">Date</label>
+                            <input type="date" id="booking-date" class="form-control" required>
+                        </div>
+                        <div class="form-group col">
+                            <label for="booking-time">Time (Your Local Time)</label>
+                            <input type="time" id="booking-time" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-submit-booking font-playfair">
+                        Confirm Exclusive Schedule <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Script File -->
+    <script src="app.js"></script>
+</body>
+</html>
